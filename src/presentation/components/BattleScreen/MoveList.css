@@ -4,6 +4,9 @@
   background-color: #f9f9f9;
   max-height: 230px;
   overflow-y: auto;
+  overflow-x: hidden; /* 横スクロールを禁止 */
+  box-sizing: border-box;
+  width: 100%; /* フレーム欠け防止 */
 }
 
 .move-item {
@@ -39,6 +42,8 @@
   overflow-x: auto;
   white-space: nowrap;
   color: #333;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f1f1f1;
 }
 
 .move-description::-webkit-scrollbar {

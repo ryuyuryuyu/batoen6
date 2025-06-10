@@ -259,4 +259,18 @@ export class GameViewModel {
   hideDefeatMessage(): void {
     this.showDefeatMessage = false;
   }
+
+  /**
+   * HPを回復する
+   * @param heal 回復量
+   */
+  healPokemon(heal: number): void {
+    if (this.currentPokemon) {
+      // BattlePokemonに回復メソッドを追加予定
+      this.currentPokemon.heal(heal);
+      if (this.showDefeatMessage && this.currentPokemon.currentHp > 0) {
+        this.showDefeatMessage = false;
+      }
+    }
+  }
 }

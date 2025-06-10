@@ -232,4 +232,13 @@ export class BattlePokemon {
     };
     return typeColors[type] || '#68A090';
   }
+
+  /**
+   * HPを回復する
+   * @param heal 回復量
+   */
+  heal(heal: number): void {
+    this._hpHistory.push(this._currentHp);
+    this._currentHp = Math.min(this._maxHp, this._currentHp + heal);
+  }
 }

@@ -70,10 +70,10 @@ export const BattleScreen: React.FC<BattleScreenProps> = observer(({ viewModel }
           {/* 技リスト */}
           <MoveList pokemon={pokemon} />
 
-          {/* ダメージボタン */}
+          {/* ダメージ・回復ボタン */}
           <DamageButtons 
-            onDamage={(damage) => viewModel.dealDamage(damage)}
-            onUndo={() => viewModel.undoHpChange()}
+            onDamage={(damage: number) => viewModel.dealDamage(damage)}
+            onHeal={(heal: number) => viewModel.healPokemon(heal)}
           />
 
           {/* サイコロボタン */}
