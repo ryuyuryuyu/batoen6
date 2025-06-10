@@ -39,7 +39,7 @@ export const PokemonCard: React.FC<PokemonCardProps> = observer(({
     const typeColorMap: Record<string, { color: string; background: string }> = {
       'ノーマル': { color: '#000', background: '#A8A878' },
       'かくとう': { color: '#fff', background: '#C03028' },
-      'ひこう': { color: '#000', background: '#A890F0' },
+      'ひこう': { color: '#fff', background: '#00bfff' },
       'ほのお': { color: '#fff', background: '#F08030' },
       'くさ': { color: '#000', background: '#78C850' },
       'みず': { color: '#fff', background: '#6890F0' },
