@@ -165,12 +165,14 @@ export class BattlePokemon {
   }
 
   /**
-   * HPの割合を維持して進化/退化
+   * HPの差分を維持して進化/退化
    * @param newPokemon 新しいポケモン
    */
   evolveWithHpRatio(newPokemon: BattlePokemon): BattlePokemon {
-    const hpRatio = this._currentHp / this._maxHp;
-    const newCurrentHp = Math.floor(newPokemon.maxHp * hpRatio);
+    // const hpRatio = this._currentHp / this._maxHp;
+    // const newCurrentHp = Math.floor(newPokemon.maxHp * hpRatio);
+    const hpRatio = this._maxHp - this._currentHp;
+    const newCurrentHp = newPokemon.maxHp - hpRatio;
     
     // 新しいポケモンのHPを調整
     newPokemon._currentHp = newCurrentHp;
