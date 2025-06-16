@@ -198,17 +198,17 @@
 
 /* タイプ別の色設定 */
 .type-ほのお { background-color: #F08030; }
-.type-みず { background-color: #6890F0; }
+.type-みず { background-color: #2a67f6; }
 .type-くさ { background-color: #78C850; }
 .type-でんき { background-color: #F8D030; color: #000; }
 .type-エスパー { background-color: #F85888; }
-.type-こおり { background-color: #98D8D8; color: #000; }
+.type-こおり { background-color: #98D8D8; color: #025874; }
 .type-ドラゴン { background-color: #7038F8; }
 .type-あく { background-color: #705848; }
 .type-かくとう { background-color: #C03028; }
 .type-どく { background-color: #A040A0; }
 .type-じめん { background-color: #E0C068; color: #000; }
-.type-ひこう { background-color: #A890F0; }
+.type-ひこう { background-color: #00bfff; color: #fff; }
 .type-むし { background-color: #A8B820; }
 .type-いわ { background-color: #B8A038; }
 .type-ゴースト { background-color: #705898; }
