@@ -47,24 +47,26 @@ export const BattleScreen: React.FC<BattleScreenProps> = observer(({ viewModel }
             >
               やめる
             </button>
-            
-            {pokemon.hasPreEvolution() && (
-              <button 
-                className="devolve-button"
-                onClick={() => viewModel.devolvePokemon()}
-              >
-                進化前
-              </button>
-            )}
-            
-            {pokemon.hasEvolution() && (
-              <button 
-                className="evolve-button"
-                onClick={() => viewModel.evolvePokemon()}
-              >
-                進化
-              </button>
-            )}
+            <div style={{ flex: 1, display: 'flex', justifyContent: 'center' }}>
+              {pokemon.hasPreEvolution() && (
+                <button 
+                  className="devolve-button"
+                  onClick={() => viewModel.devolvePokemon()}
+                >
+                  進化前
+                </button>
+              )}
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+              {pokemon.hasEvolution() && (
+                <button 
+                  className="evolve-button"
+                  onClick={() => viewModel.evolvePokemon()}
+                >
+                  進化
+                </button>
+              )}
+            </div>
           </div>
 
           {/* 技リスト */}
