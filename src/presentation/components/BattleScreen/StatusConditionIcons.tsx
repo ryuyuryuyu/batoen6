@@ -59,7 +59,10 @@ export const StatusConditionIcons: React.FC<StatusConditionIconsProps> = observe
             onMouseUp={endPress}
             onMouseLeave={endPress}
             onTouchStart={startPress}
-            onTouchEnd={endPress}
+            onTouchEnd={() => {
+              endPress();
+              onToggle(condition.id);
+            }}
             title={condition.name}
           >
             {condition.name.charAt(0)}

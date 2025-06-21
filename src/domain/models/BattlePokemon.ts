@@ -165,14 +165,12 @@ export class BattlePokemon {
   }
 
   /**
-   * HPの差分を維持して進化/退化
+   * HPの割合を維持して進化/退化
    * @param newPokemon 新しいポケモン
    */
   evolveWithHpRatio(newPokemon: BattlePokemon): BattlePokemon {
-    // const hpRatio = this._currentHp / this._maxHp;
-    // const newCurrentHp = Math.floor(newPokemon.maxHp * hpRatio);
-    const hpRatio = this._maxHp - this._currentHp;
-    const newCurrentHp = newPokemon.maxHp - hpRatio;
+    const hpRatio = this._currentHp / this._maxHp;
+    const newCurrentHp = Math.floor(newPokemon.maxHp * hpRatio);
     
     // 新しいポケモンのHPを調整
     newPokemon._currentHp = newCurrentHp;
@@ -231,14 +229,5 @@ export class BattlePokemon {
       'フェアリー': '#EE99AC'
     };
     return typeColors[type] || '#68A090';
-  }
-
-  /**
-   * HPを回復する
-   * @param heal 回復量
-   */
-  heal(heal: number): void {
-    this._hpHistory.push(this._currentHp);
-    this._currentHp = Math.min(this._maxHp, this._currentHp + heal);
   }
 }

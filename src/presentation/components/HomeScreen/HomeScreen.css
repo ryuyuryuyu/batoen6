@@ -28,7 +28,7 @@
   width: 100%;
   max-width: 450px;
   height: 100%;
-  max-height: 650px;
+  max-height: 700px;
   background: rgba(255, 255, 255, 0.95);
   border: 4px solid #2c3e50;
   border-radius: 20px;
@@ -116,7 +116,7 @@
   gap: 10px;
   overflow-y: auto;
   padding: 5px;
-  min-height: 100;
+  min-height: 0;
 }
 
 /* スクロールバーのカスタマイズ */
@@ -142,10 +142,11 @@
   background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%);
   border: 3px solid #dee2e6;
   border-radius: 12px;
-  padding: 6px;
+  padding: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
   position: relative;
+  /* 高さを半分にした。調整したい場合はここを変更 */
   height: 40px;
   display: flex;
   flex-direction: column;
@@ -198,17 +199,17 @@
 
 /* タイプ別の色設定 */
 .type-ほのお { background-color: #F08030; }
-.type-みず { background-color: #2a67f6; }
+.type-みず { background-color: #6890F0; }
 .type-くさ { background-color: #78C850; }
 .type-でんき { background-color: #F8D030; color: #000; }
 .type-エスパー { background-color: #F85888; }
-.type-こおり { background-color: #98D8D8; color: #025874; }
+.type-こおり { background-color: #98D8D8; color: #000; }
 .type-ドラゴン { background-color: #7038F8; }
 .type-あく { background-color: #705848; }
 .type-かくとう { background-color: #C03028; }
 .type-どく { background-color: #A040A0; }
 .type-じめん { background-color: #E0C068; color: #000; }
-.type-ひこう { background-color: #00bfff; color: #fff; }
+.type-ひこう { background-color: #A890F0; }
 .type-むし { background-color: #A8B820; }
 .type-いわ { background-color: #B8A038; }
 .type-ゴースト { background-color: #705898; }
