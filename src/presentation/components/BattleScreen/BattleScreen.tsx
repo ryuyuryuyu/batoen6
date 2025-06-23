@@ -76,7 +76,6 @@ export const BattleScreen: React.FC<BattleScreenProps> = observer(({ viewModel }
           <DamageButtons 
             onDamage={(damage) => viewModel.dealDamage(damage)}
             onHeal={(heal) => viewModel.healPokemon(heal)}
-            onUndo={() => viewModel.undoHpChange()}
           />
 
           {/* サイコロボタン */}

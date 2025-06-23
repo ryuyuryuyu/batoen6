@@ -4,14 +4,13 @@ import './DamageButtons.css';
 interface DamageButtonsProps {
   onDamage: (damage: number) => void;
   onHeal: (heal: number) => void;
-  onUndo: () => void;
 }
 
 /**
  * ダメージ・回復ボタンコンポーネント
  * ダメージ量・回復量の選択を提供
  */
-export const DamageButtons: React.FC<DamageButtonsProps> = ({ onDamage, onHeal, onUndo }) => {
+export const DamageButtons: React.FC<DamageButtonsProps> = ({ onDamage, onHeal }) => {
   const damageValues = [30, 20, 10];
   const healValues = [30, 20, 10];
 
@@ -38,14 +37,6 @@ export const DamageButtons: React.FC<DamageButtonsProps> = ({ onDamage, onHeal, 
             +{heal}
           </button>
         ))}
-      </div>
-      <div className="undo-section">
-        <button
-          className="undo-button"
-          onClick={onUndo}
-        >
-          元に戻す
-        </button>
       </div>
     </div>
   );
