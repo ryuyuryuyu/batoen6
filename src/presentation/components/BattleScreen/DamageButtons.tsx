@@ -39,6 +39,14 @@ export const DamageButtons: React.FC<DamageButtonsProps> = ({ onDamage, onHeal, 
           </button>
         ))}
       </div>
+      <div className="undo-section">
+        <button
+          className="undo-button"
+          onClick={onUndo}
+        >
+          元に戻す
+        </button>
+      </div>
     </div>
   );
 };

@@ -134,6 +134,20 @@ export class GameViewModel {
   }
 
   /**
+   * HPを回復する
+   * @param heal 回復量
+   */
+  healPokemon(heal: number): void {
+    if (this.currentPokemon) {
+      this.currentPokemon.heal(heal);
+      // 回復によって敗北状態から復活した場合、敗北メッセージを非表示にする
+      if (this.showDefeatMessage && !this.currentPokemon.isDefeated()) {
+        this.showDefeatMessage = false;
+      }
+    }
+  }
+
+  /**
    * HP変更をundo
    */
   undoHpChange(): void {

@@ -95,6 +95,15 @@ export class BattlePokemon {
   }
 
   /**
+   * HPを回復する
+   * @param heal 回復量
+   */
+  heal(heal: number): void {
+    this._hpHistory.push(this._currentHp);
+    this._currentHp = Math.min(this._maxHp, this._currentHp + heal);
+  }
+
+  /**
    * HP変更を元に戻す（undo機能）
    */
   undoHpChange(): boolean {
