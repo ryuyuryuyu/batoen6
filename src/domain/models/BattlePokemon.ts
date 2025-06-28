@@ -177,7 +177,7 @@ export class BattlePokemon {
    * HPの減少を維持して進化/退化
    * @param newPokemon 新しいポケモン
    */
-  evolveWithHpRatio(newPokemon: BattlePokemon): BattlePokemon {
+  evolveWithHpLoss(newPokemon: BattlePokemon): BattlePokemon {
     const hpRatio = this._maxHp - this._currentHp;
     const newCurrentHp = newPokemon.maxHp - hpRatio;
     

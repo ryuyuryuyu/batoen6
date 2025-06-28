@@ -234,7 +234,7 @@ export class GameViewModel {
       const evolvedPokemon = await this.pokemonRepository.getByName(evolutionName);
       if (evolvedPokemon) {
         // HPの割合を維持して進化
-        this.currentPokemon = this.currentPokemon.evolveWithHpRatio(evolvedPokemon);
+        this.currentPokemon = this.currentPokemon.evolveWithHpLoss(evolvedPokemon);
         this.pokemonImageUrl = await this.pokemonRepository.getPokemonImageUrl(evolvedPokemon.url);
       }
     } catch (error) {
@@ -259,7 +259,7 @@ export class GameViewModel {
       const devolvedPokemon = await this.pokemonRepository.getByName(preEvolutionName);
       if (devolvedPokemon) {
         // HPの割合を維持して退化
-        this.currentPokemon = this.currentPokemon.evolveWithHpRatio(devolvedPokemon);
+        this.currentPokemon = this.currentPokemon.evolveWithHpLoss(devolvedPokemon);
         this.pokemonImageUrl = await this.pokemonRepository.getPokemonImageUrl(devolvedPokemon.url);
       }
     } catch (error) {
